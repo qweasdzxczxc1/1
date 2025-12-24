@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int p = 113, a = 27, b = 73, x = 5, ax = 1, inv = 1;
+
+        for (int i = 0; i < x; i++) ax = ax * a % p;
+        for (int i = 0; i < p - 2; i++) inv = inv * ax % p;
+
+        Console.WriteLine(b * inv % p);
+    }
+}
